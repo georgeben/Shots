@@ -36,9 +36,15 @@ app.use('/', indexRoute);
 app.use('/upload', uploadRoute);
 app.use('/download', downloadRoute)
 
+app.use((req, res, next) =>{
+    return next(new Error("Page not found"))
+})
+
 
 app.use((err, req, res, next) =>{
-    res.send(`<h1>Sorry something happened</h1> ${err.message}`);
+    res.render("error", {
+        error: err.message
+    })
 })
 
 const server = app.listen(3000, () => console.log(`App started on port ${server.address().port}`))
