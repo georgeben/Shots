@@ -8,6 +8,7 @@ const express = require('express'),
 //Routes
 const indexRoute = require('./routes/index');
 const uploadRoute = require('./routes/upload');
+const downloadRoute = require('./routes/download')
 
 const publicPath = path.resolve(__dirname, "public");
 
@@ -24,6 +25,7 @@ app.set("view engine", "ejs");
 
 app.use('/', indexRoute);
 app.use('/upload', uploadRoute);
+app.use('/download', downloadRoute)
 
 
 app.use((err, req, res, next) =>{
