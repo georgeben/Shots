@@ -12,6 +12,7 @@
   "dependencies": {
     "ejs": "^2.6.1",
     "express": "^4.16.4",
+    "express-formidable": "^1.2.0",
     "morgan": "^1.9.1"
   }
 }
