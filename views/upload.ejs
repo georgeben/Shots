@@ -5,8 +5,15 @@
 <body>
     <h1>Upload your shot</h1>
     <form method='post' enctype="multipart/form-data">
-        <input type='file' name='fileUpload'>
-        <input type='submit'>
+        <div class="form-group">
+            <label for="imgCaption">Caption</label>
+            <input type="text" class="form-control" id="imgCaption" placeholder="Say something about this photo" name="caption">
+        </div>
+        <div class="form-group">
+            <label for="image">Example file input</label>
+            <input type="file" class="form-control-file" id="image" name="fileUpload">
+            <input type='submit' class="btn btn-primary">
+        </div>
     </form>
 </body>
 </html>

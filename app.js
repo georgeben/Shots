@@ -3,7 +3,15 @@ const express = require('express'),
       path = require('path'),
       expressFormidable = require('express-formidable'),
       formidable = require('formidable'),
-      bodyParser = require('body-parser');
+      bodyParser = require('body-parser'),
+      mongoose = require('mongoose');
+
+//DB Connection
+mongoose.connect('mongodb://localhost/Shots', {useNewUrlParser:true});
+mongoose.Promise = global.Promise;
+const db = mongoose.connection;
+db.on('connected', () => console.log("Successfully connected to database"));
+db.on('error', () => console.log("Failed to connect to db "+ err.message))
 
 //Routes
 const indexRoute = require('./routes/index');
@@ -15,10 +23,11 @@ const publicPath = path.resolve(__dirname, "public");
 const app = express();
 
 app.use(logger('tiny'));
+app.use(bodyParser.urlencoded({extended:false}));
 
 app.set("public", publicPath);
 
-app.use(express.static(publicPath))
+app.use(express.static(publicPath));
 
 app.set("views", path.resolve(__dirname, "views"));
 app.set("view engine", "ejs");
