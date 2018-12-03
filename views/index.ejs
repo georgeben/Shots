@@ -4,7 +4,12 @@
 <body>
     <h1>Hello</h1>
     <% shots.forEach((image) => { %>
-        <img src=<%= image %> >
+        <div>
+            <img src=<%= image %>>
+            <% var downloadLink = `/download?img=${basename}` %>
+            <a href=<%= downloadLink %>>Download</a>
+        </div>
+        
     <%}) %>
 </body>
 </html>
