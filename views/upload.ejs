@@ -3,8 +3,16 @@
 </head>
 
 <body>
-    <h1>Upload your shot</h1>
-    <form method='post' enctype="multipart/form-data">
+
+    <header>
+        <nav>
+            <h1 class="logo">Shots</h1>
+            <p class="motto">The world is waiting to see your shots...</p>
+        </nav>
+    </header>
+
+    <form method='post' enctype="multipart/form-data" class="upload-form">
+        <h3>Upload your shot</h3>
         <div class="form-group">
             <label for="imgCaption">Caption</label>
             <input type="text" class="form-control" id="imgCaption" placeholder="Say something about this photo" name="caption">
@@ -12,7 +20,7 @@
         <div class="form-group">
             <label for="image">Example file input</label>
             <input type="file" class="form-control-file" id="image" name="fileUpload">
-            <input type='submit' class="btn btn-primary">
+            <input type='submit' class="btn uploadBtn ">
         </div>
     </form>
 </body>

@@ -35,7 +35,7 @@ router.post('/', (req, res) =>{
         .catch((err) => console.log("Oh no, an error "+ err.message));
         
         console.log("Incoming files", files);
-        res.send("Uploaded successfully");
+        res.redirect('/');
     })
 })
 

@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body{
+    background-color: #e9ebee;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+header{
+    background-color: #172237;
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 1px 1px 2px #444;
+}
+
+header h1{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    font-size: 1.8em;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+}
+
+nav div{
+    width: 30%;
+}
+
+.upload{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.upload a{
+    color: white !important;
+}
+
+.motto{
+    margin: 0;
+    font-size: 0.7em;
+    letter-spacing: 2px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container{
+    width: 80%;
+    margin-top: 70px;
+    display: flex;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+.container img{
+    display: block;
+    width: 100%;
+    margin: auto;
+}
+
+.shot{
+    width: 24%;
+    background-color: #fff;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+}
+
+.downloadBtn{
+    background-color: #172237;
+    padding: 5px;
+    width: 50%;
+    margin: auto;
+    color: white;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.upload-form{
+    width: 50%;
+    margin: auto;
+    margin-top: 200px;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.upload-form h3{
+    text-align: center;
+}
+
+.uploadBtn{
+    display: block;
+    margin: auto;
+    width: 100%;
+    background-color: #172237;
+    margin-top: 10px;
+    color: white;
+}
+

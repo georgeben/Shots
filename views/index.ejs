@@ -2,14 +2,28 @@
     <title>Shots</title>
 </head>
 <body>
-    <h1>Hello</h1>
-    <% shots.forEach((image) => { %>
-        <div>
-            <img src=<%= image %>>
-            <% var downloadLink = `/download?img=${basename}` %>
-            <a href=<%= downloadLink %>>Download</a>
-        </div>
-        
-    <%}) %>
+    <header>
+        <nav>
+            <div></div>
+            <div>
+                <h1 class="logo">Shots</h1>
+                <p class="motto">The world is waiting to see your shots...</p>
+            </div>
+            <div class="upload">
+                <a href="/upload" >Upload a shot</a>
+            </div>
+        </nav>
+    </header>
+    <div class="container" >
+        <% shots.forEach((image) => { %>
+            <div class="shot" > 
+                <img src=<%= image %>>
+                <% var downloadLink = `/download?img=${basename}` %>
+                <p><%= caption %></p>
+                <a href=<%= downloadLink %> class="downloadBtn" >Download</a>
+            </div>
+            
+        <%}) %>
+    </div>
 </body>
 </html>
