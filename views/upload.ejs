@@ -4,12 +4,9 @@
 
 <body>
     <h1>Upload your shot</h1>
-    <form method="POST" action="/upload" >
-        <div class="form-group">
-            <label for="file">Example shot</label>
-            <input type="file" class="form-control-file" id="file">
-        </div>
-        <button class="btn btn-primary" >Upload</button>
+    <form method='post' enctype="multipart/form-data">
+        <input type='file' name='fileUpload'>
+        <input type='submit'>
     </form>
 </body>
 </html>
