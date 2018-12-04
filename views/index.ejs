@@ -18,7 +18,7 @@
         <% shots.forEach((image, i) => { %>
             <div class="shot" > 
                 <img src=<%= image %>>
-                <% var downloadLink = `/download?img=${basename}` %>
+                <% var downloadLink = `/download?img=${basenames[i]}` %>
                 <p><%= captions[i] %></p>
                 <a href=<%= downloadLink %> class="downloadBtn" >Download</a>
             </div>
