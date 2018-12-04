@@ -61,6 +61,7 @@ nav div{
     display: block;
     width: 100%;
     margin: auto;
+    height: 250px;
 }
 
 .shot{
@@ -80,7 +81,6 @@ nav div{
     display: block;
     text-align: center;
     margin-top: 10px;
-    border-radius: 10px;
 }
 
 .upload-form{

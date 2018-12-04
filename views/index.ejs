@@ -15,11 +15,11 @@
         </nav>
     </header>
     <div class="container" >
-        <% shots.forEach((image) => { %>
+        <% shots.forEach((image, i) => { %>
             <div class="shot" > 
                 <img src=<%= image %>>
                 <% var downloadLink = `/download?img=${basename}` %>
-                <p><%= caption %></p>
+                <p><%= captions[i] %></p>
                 <a href=<%= downloadLink %> class="downloadBtn" >Download</a>
             </div>
             
