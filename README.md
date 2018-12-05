@@ -8,3 +8,5 @@ Shots helps you upload and share your photos with others and also download free 
 - `cd` into the repo
 - Run `npm install`
 Run `npm start`
+
+View the app on `localhost:3000`
